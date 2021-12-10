@@ -1,6 +1,8 @@
 //import useState hook to create menu collapse state
 import React, { useState } from "react";
-import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+// import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+import PersonIcon from '@material-ui/icons/Person';// import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
+import TouchAppIcon from '@material-ui/icons/TouchApp';
 import Modal from 'react-modal';
 import {Link} from 'react-router-dom'
 
@@ -56,9 +58,13 @@ const Sidebar = () => {
               <MenuItem active={true} icon={<FiHome />}>
                 Home
               </MenuItem>
-              <MenuItem active={true} icon={<FaList />}>Lists</MenuItem>
-              <MenuItem active={true} icon={<RiPencilLine />}><span><Link to={/Notifications/}>Notifications</Link></span></MenuItem>
-              <MenuItem active={true} icon={<PlaylistAddIcon/>}><span ><AddOperator/></span></MenuItem>
+              <MenuItem active={true} icon={<TouchAppIcon/>}>台灣</MenuItem>
+              <MenuItem active={true} icon={<TouchAppIcon/>}>國際</MenuItem>
+              <MenuItem active={true} icon={<TouchAppIcon/>}>體育</MenuItem>
+              <MenuItem active={true} icon={<TouchAppIcon/>}>Covid-19</MenuItem>
+
+              {/* <MenuItem active={true} icon={<RiPencilLine />}><span><Link to={/Notifications/}>Notifications</Link></span></MenuItem> */}
+              <MenuItem active={true} icon={<PersonIcon/>}><span ><AddOperator/>新增一條新聞</span></MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>
